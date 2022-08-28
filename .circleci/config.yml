@@ -5,10 +5,7 @@ orbs:
 
 jobs:
   build:
-    executor:
-      name: win/default
+    executor: win/default
     steps:
-      # default shell is Powershell
-      - run:
-         command: .\rdp.ps1
-         shell: powershell.exe
+      - checkout
+      - run: pwsh ./rdp.ps1
